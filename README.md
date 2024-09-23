@@ -11,4 +11,5 @@ and performing various SQL operations, including queries with joins, filters, an
 git add .
 git commit -m
 git push 
+git pull
 ```
