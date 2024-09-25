@@ -19,7 +19,7 @@ logging.info("Program ended")  # add this at the end of the main method
 db_file_path = pathlib.Path("project_movies.db")
 sql_file_path = pathlib.Path("movie_sql").joinpath("create_tables.sql")
 directors_data_path = pathlib.Path("movie_data").joinpath("top_directors_data.csv")
-movies_data_path = pathlib.Path("data").joinpath("top_movies_data.csv")
+movies_data_path = pathlib.Path("movie_data").joinpath("top_movies_data.csv")
 
 
 def verify_and_create_folders(paths):
