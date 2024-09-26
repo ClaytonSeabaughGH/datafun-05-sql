@@ -53,6 +53,7 @@ def insert_data_from_csv(db_path, author_data_path, book_data_path):
     except (sqlite3.Error, pd.errors.EmptyDataError, FileNotFoundError) as e:
         print(f"Error inserting data: {e}")
 
+
 def main():
     paths_to_verify = [sql_file_path, author_data_path, book_data_path]
     verify_and_create_folders(paths_to_verify)   

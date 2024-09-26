@@ -18,7 +18,7 @@ logging.info("Program ended")  # add this at the end of the main method
 # Create file paths for functions
 db_file_path = pathlib.Path("project_movies.db")
 sql_file_path = pathlib.Path("movie_sql").joinpath("create_tables.sql")
-directors_data_path = pathlib.Path("movie_data").joinpath("top_directors_data.csv")
+directors_data_path = pathlib.Path("directors_data").joinpath("top_directors_data.csv")
 movies_data_path = pathlib.Path("movie_data").joinpath("top_movies_data.csv")
 
 
@@ -64,6 +64,14 @@ def insert_data_from_csv(db_path, directors_data_path, movies_data_path):
     except (sqlite3.Error, pd.errors.EmptyDataError, FileNotFoundError) as e:
         print(f"Error inserting data: {e}")
 
+def execute_sql_from_file(db_path, sql_file_path):
+    with sqlite3.connect(db_path) as conn:
+        with open(sql_file_path, 'r') as file:
+            sql_script = file.read()
+        conn.executescript(sql_script)
+        print(f"Executed SQL from {sql_file_path}")
+
+
 def main():
     paths_to_verify = [sql_file_path, directors_data_path, movies_data_path]
     verify_and_create_folders(paths_to_verify)   
@@ -71,6 +79,7 @@ def main():
     create_database(db_file_path)
     create_tables(db_file_path, sql_file_path)
     insert_data_from_csv(db_file_path, directors_data_path, movies_data_path)
+logging.info("All SQL operations completed successfully")
 
 if __name__ == "__main__":
     main()
