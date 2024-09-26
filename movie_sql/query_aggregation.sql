@@ -1,3 +1,4 @@
+-- database: ../project_movies.db
 -- Aggregate functions
 
 -- Show all unique directors

@@ -1,3 +1,4 @@
+-- database: ../project_movies.db
 -- Start by deleting any tables if the exist already
 -- We want to be able to re-run this script as needed.
 -- DROP tables in reverse order of creation 
@@ -11,12 +12,13 @@ DROP TABLE IF EXISTS directors;
 -- No foreign key
 
 CREATE TABLE directors (
-    id INT PRIMARY KEY,
     production_year INT,
+    id INT PRIMARY KEY,
     title TEXT,
     director TEXT,
-    director_id TEXT,
+    director_id INT,
     co_directors TEXT,
+    co_directors_id INT,
     genres TEXT,
     cameras TEXT,
     negative_format TEXT,
@@ -28,6 +30,7 @@ CREATE TABLE directors (
 -- Has a foreign key 
 
 CREATE TABLE movies (
+    production_year INT,
     id INT PRIMARY KEY,
     title TEXT,
     directors TEXT,
@@ -36,6 +39,7 @@ CREATE TABLE movies (
     negative_format TEXT,
     budget INT,
     budget_source TEXT,
-    film_type TEXT
+    film_type TEXT,
     FOREIGN KEY (id) REFERENCES directors(id)
 );
+

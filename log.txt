@@ -21,3 +21,6 @@
 2024-09-26 15:55:27,527 - INFO - Program started
 2024-09-26 15:55:27,528 - INFO - Program ended
 2024-09-26 15:55:27,528 - INFO - All SQL operations completed successfully
+2024-09-26 16:14:12,458 - INFO - Program started
+2024-09-26 16:14:12,458 - INFO - Program ended
+2024-09-26 16:14:12,458 - INFO - All SQL operations completed successfully

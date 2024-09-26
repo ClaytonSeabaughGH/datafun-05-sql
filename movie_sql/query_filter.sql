@@ -1,5 +1,6 @@
+-- database: ../project_movies.db
 -- Where clause to help filter data
 
 SELECT *
 FROM directors
-WHERE genre = "Horror"
+WHERE genres = "Horror"
