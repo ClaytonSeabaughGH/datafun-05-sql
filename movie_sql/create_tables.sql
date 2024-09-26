@@ -15,7 +15,7 @@ CREATE TABLE directors (
     production_year INT,
     title TEXT,
     director TEXT,
-    director_id INT,
+    director_id TEXT,
     co_directors TEXT,
     genres TEXT,
     cameras TEXT,
