@@ -1,6 +1,9 @@
 -- database: ../project_movies.db
 -- Insert 10 rows into each table
 -- Didn't do 10 on the movies table because it would take a lot of time and you can see I know how to insert into data into tables
+
+
+
 INSERT INTO directors
 (   
     production_year,
@@ -172,3 +175,6 @@ VALUES
     "imbd",
     "U"
 );
+
+BULK INSERT movies
+FROM 'C:\Users\clayt\Documents\datafun-05-sql\movie_data\top_movies_data.csv'
