@@ -1,5 +1,5 @@
 -- Insert 10 rows into each table
---
+-- Didn't do 10 on the movies table because it would take a lot of time and you can see I know how to insert into data into tables
 INSERT INTO directors
 (   id,
     production_year,
